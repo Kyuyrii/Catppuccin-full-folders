@@ -34,23 +34,21 @@
 
 Download the files containing the folders with the icons in [Releases](https://github.com/Kyuyrii/Catppuccin-full-folders/releases)
 
-#### If the Catppuccin icons are updated and you want to recreate the folders, follow these instructions:
+#### If you prefer to generate the folders with papirus-folders, follow these instructions:
 
-1. Make sure You have [Papirus Icon Theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) installed
-2. Clone this repository and change to cloned directory:
+1. Clone this repository and change to cloned directory:
     ```
-    git clone https://github.com/catppuccin/papirus-folders.git
-    cd papirus-folders
+    git clone https://github.com/catppuccin/papirus-folders.git && cd papirus-folders
     ```
-3. Install `papirus-folders` script from [Papirus Icon Theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme):
+2. Install `papirus-folders` script from [Papirus Icon Theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme):
     ```
     curl -LO https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-folders/master/papirus-folders && chmod +x ./papirus-folders
     ```
-4. Download and extract the catpuccin-full-folders-creator files to the papirus-folders folder
+3. Download and extract the catpuccin-full-folders-creator files to the papirus-folders folder
     ```
     wget https://github.com/Kyuyrii/Catppuccin-full-folders/releases/download/2025-06-19/catppuccin-full-folders-creator.tar.gz && tar -xvzf catppuccin-full-folders-creator.tar.gz
     ```
-5. Run the script:
+4. Run the script:
     ```
     ./full-folders-script.sh
     ```
@@ -58,3 +56,7 @@ Download the files containing the folders with the icons in [Releases](https://g
 ## Important information
 
 This repository is to facilitate the use of the Catppuccin icon theme, I made folders for each available variation, but to generate them, it is necessary to use files from Papirus and Catppuccin repositories.
+
+To work well with KDE and GTK environments, the script generates the files in the ```/usr/share/icons``` folder
+
+The original repository is here: https://github.com/catppuccin/papirus-folders
