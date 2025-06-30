@@ -1,7 +1,7 @@
 name: icon-theme-cat
 build-base: core24
 base: bare
-version: '2025-06-19'
+version: '2025-06-30'
 platforms:
   all:
     build-on: [amd64]
@@ -188,7 +188,7 @@ slots:
 parts:
   icon-themes:
     plugin: dump
-    source: https://github.com/Kyuyrii/Catppuccin-full-folders/releases/download/2025-06-19/icon-theme-cat-snapcraft.deb
+    source: https://github.com/Kyuyrii/Catppuccin-full-folders/releases/download/2025-06-30-creator/icon-theme-cat-snap-creation-files.deb
     organize:
       usr/share/icons: share/icons
     prime:
