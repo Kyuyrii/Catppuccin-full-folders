@@ -1,7 +1,7 @@
 # Catppuccin-full-folders
 
 <h3 align="center">
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
+	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="200" alt="Logo"/><br/>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 	Catppuccin for <a href="https://github.com/PapirusDevelopmentTeam/papirus-icon-theme">Papirus Folders</a>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
@@ -32,7 +32,7 @@
 
 ## Usage
 
-Download the files containing the folders with the icons in [Releases](https://github.com/Kyuyrii/Catppuccin-full-folders/releases)
+You can download the created folders with the icons [here](https://github.com/Kyuyrii/Catppuccin-full-folders/releases/tag/2025-06-30-icons)
 
 #### If you prefer to generate the folders with papirus-folders, follow these instructions:
 
@@ -46,12 +46,18 @@ Download the files containing the folders with the icons in [Releases](https://g
     ```
 3. Download and extract the catpuccin-full-folders-creator files to the papirus-folders folder
     ```
-    wget https://github.com/Kyuyrii/Catppuccin-full-folders/releases/download/2025-06-19/catppuccin-full-folders-creator.tar.gz && tar -xvzf catppuccin-full-folders-creator.tar.gz
+    wget https://github.com/Kyuyrii/Catppuccin-full-folders/releases/download/2025-06-30-creator/catppuccin-full-folders-creator.tar.gz && tar -xvzf catppuccin-full-folders-creator.tar.gz
     ```
 4. Run the script:
     ```
-    ./full-folders-script.sh
+    ./catppuccin-full-folders-script.sh
     ```
+    
+# If you use Snap apps, install the Snap version of the Papirus icon theme and Catppuccin-Full-Folders:
+
+```
+sudo snap install icon-theme-papirus && sudo snap install icon-theme-cat
+```
 
 ## Important information
 
