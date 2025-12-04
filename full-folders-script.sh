@@ -48,23 +48,13 @@ if [ ! -d "$ICONS_DIR/Papirus" ]; then
     exit 1
 fi
 
-# Check if Papirus-Dark and Papirus-Light exist
-PAPIRUS_DARK_EXISTS=false
-PAPIRUS_LIGHT_EXISTS=false
+# 2. Check for local papirus-folders
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PAPIRUS_FOLDERS="$SCRIPT_DIR/papirus-folders"
 
-if [ -d "$ICONS_DIR/Papirus-Dark" ]; then
-    PAPIRUS_DARK_EXISTS=true
-    echo "Found Papirus-Dark theme"
-fi
-
-if [ -d "$ICONS_DIR/Papirus-Light" ]; then
-    PAPIRUS_LIGHT_EXISTS=true
-    echo "Found Papirus-Light theme"
-fi
-
-# 2. Check for papirus-folders
-if ! command -v papirus-folders &> /dev/null; then
-    echo "Error: papirus-folders not found"
+if [ ! -x "$PAPIRUS_FOLDERS" ]; then
+    echo "Error: papirus-folders not found in script directory"
+    echo "Make sure papirus-folders is in the same folder as this script"
     exit 1
 fi
 
@@ -95,9 +85,9 @@ create_dark_light_version() {
 
     # Determine which Papirus to use as base
     local papirus_base="Papirus"
-    if [ "$suffix" = "-Dark" ] && [ "$PAPIRUS_DARK_EXISTS" = true ]; then
+    if [ "$suffix" = "-Dark" ]; then
         papirus_base="Papirus-Dark"
-    elif [ "$suffix" = "-Light" ] && [ "$PAPIRUS_LIGHT_EXISTS" = true ]; then
+    elif [ "$suffix" = "-Light" ]; then
         papirus_base="Papirus-Light"
     fi
 
@@ -361,7 +351,7 @@ for flavor in "${FLAVORS[@]}"; do
 
         # 9. Apply papirus-folders only to main theme
         papirus_color="cat-${theme_lower}"
-        papirus-folders -C "$papirus_color" --theme "$theme" 2>/dev/null || true
+        ./papirus-folders -C "$papirus_color" --theme "$theme" 2>/dev/null || true
     done
 done
 
