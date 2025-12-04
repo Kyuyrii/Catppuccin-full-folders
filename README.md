@@ -32,9 +32,7 @@
 
 ## Usage
 
-You can download the created folders with the icons [here](https://github.com/Kyuyrii/Catppuccin-full-folders/releases/tag/2025-06-30-icons)
-
-#### If you prefer to generate the folders with papirus-folders, follow these instructions:
+#### To generate the folders with papirus-folders, follow these instructions:
 
 1. Clone this repository and change to cloned directory:
     ```
@@ -46,11 +44,11 @@ You can download the created folders with the icons [here](https://github.com/Ky
     ```
 3. Download and extract the catpuccin-full-folders-creator files to the papirus-folders folder
     ```
-    wget https://github.com/Kyuyrii/Catppuccin-full-folders/releases/download/2025-06-30-creator/catppuccin-full-folders-creator.tar.gz && tar -xvzf catppuccin-full-folders-creator.tar.gz
+    git clone https://github.com/Kyuyrii/Catppuccin-full-folders.git && chmod +x Catppuccin-full-folders/full-folders-script.sh && mv Catppuccin-full-folders/full-folders* .
     ```
-4. Run the script:
+4. Run the script choosing the flavor and location of Papirus (If you don't choose anything, it will create all variations and search for Papirus in /usr/share/icons):
     ```
-    ./catppuccin-full-folders-script.sh
+    ./full-folders-script.sh frappe --path $HOME/.local/share/icons/
     ```
     
 # If you use Snap apps, install the Snap version of the Papirus icon theme and Catppuccin-Full-Folders:
@@ -62,7 +60,5 @@ sudo snap install icon-theme-papirus && sudo snap install icon-theme-cat
 ## Important information
 
 This repository is to facilitate the use of the Catppuccin icon theme, I made folders for each available variation, but to generate them, it is necessary to use files from Papirus and Catppuccin repositories.
-
-To work well with KDE and GTK environments, the script generates the files in the ```/usr/share/icons``` folder
 
 The original repository is here: https://github.com/catppuccin/papirus-folders
