@@ -42,7 +42,7 @@
     ```
     curl -LO https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-folders/master/papirus-folders && chmod +x ./papirus-folders
     ```
-3. Download the catpuccin-full-folders-creator files to the papirus-folders folder
+3. Download the catpuccin-full-folders files to the papirus-folders folder
     ```
     git clone https://github.com/Kyuyrii/Catppuccin-full-folders.git && chmod +x Catppuccin-full-folders/full-folders-script.sh && mv Catppuccin-full-folders/full-folders* .
     ```
