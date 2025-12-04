@@ -359,12 +359,9 @@ for flavor in "${FLAVORS[@]}"; do
         create_dark_light_version "$theme" "-Dark"
         create_dark_light_version "$theme" "-Light"
 
-        # 9. Apply papirus-folders
+        # 9. Apply papirus-folders only to main theme
         papirus_color="cat-${theme_lower}"
-        echo "  Applying color: $papirus_color"
         papirus-folders -C "$papirus_color" --theme "$theme" 2>/dev/null || true
-        papirus-folders -C "$papirus_color" --theme "${theme}-Dark" 2>/dev/null || true
-        papirus-folders -C "$papirus_color" --theme "${theme}-Light" 2>/dev/null || true
     done
 done
 
