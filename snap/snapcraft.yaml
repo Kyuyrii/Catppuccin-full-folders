@@ -188,7 +188,7 @@ slots:
 parts:
   icon-themes:
     plugin: dump
-    source: https://github.com/Kyuyrii/Catppuccin-full-folders/releases/download/$SNAPCRAFT_PROJECT_VERSION/snap-files-extra-folders_$SNAPCRAFT_PROJECT_VERSION.deb
+    source: https://github.com/Kyuyrii/Catppuccin-full-folders/releases/download/$SNAPCRAFT_PROJECT_VERSION/snap-files-full-folders_$SNAPCRAFT_PROJECT_VERSION.deb
     organize:
       usr/share/icons: usr/share/icons
     prime:
